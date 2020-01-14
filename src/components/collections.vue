@@ -6,9 +6,13 @@
         </div>
           <div class="level-right">
             <p class="level-item"><b-button type="is-primary" outlined>Upload list</b-button></p>
-             <p class="level-item"><b-button type="is-primary"  @click="isImageModalActive = true">Invite new user</b-button></p>
+             <p class="level-item"> <button class="button is-primary">
+            <b-icon pack="fas" icon="plus-circle" size="is-small"></b-icon>
+            <span>Add new user</span>
+        </button></p>
           </div>
        </div>
+     
 
     <b-table :data="data" >
         <template slot-scope="props">
@@ -44,22 +48,38 @@
                 </b-table-column>
                 <b-table-column label="">
                       <b-dropdown           
-                    position="is-bottom-right"
-                    aria-role="menu">
-                    <a
+                        position="is-bottom-left"
+                        aria-role="menu">
+                        <a
                         class="navbar-item"
                         slot="trigger"
                         role="button">
-                        <span>Edit</span>
+                        <span>
+                            <b-icon
+                                pack="fas"
+                                icon="ellipsis-v"
+                                size="is-small"
+                               >
+                            </b-icon>
+                        </span>
                        
                     </a>
                     <b-dropdown-item value="settings">
+                        <div class="media">
+                            <b-icon class="media-left" icon="edit" size="is-small"></b-icon>
+                            <div class="media-content">
+                                <p>Edit user</p>
+                            </div>
+                        </div>
                         
-                        Edit
                     </b-dropdown-item>
-                    <b-dropdown-item value="logout" aria-role="menuitem">
-                        
-                        Delete
+                    <b-dropdown-item value="logout" aria-role="menuitem"> 
+                         <div class="media">
+                            <b-icon class="media-left" icon="trash-alt" size="is-small" type="is-danger"></b-icon>
+                            <div class="media-content">
+                                <p>Delete user</p>
+                            </div>
+                        </div>
                     </b-dropdown-item>
                 </b-dropdown>
                 </b-table-column>
@@ -136,7 +156,7 @@ If you want more dashboards &nbsp;</p>
             this.$buefy.snackbar.open({
                     message: 'Yellow button and positioned on top, click to close',
                     type: 'is-primary',
-                    position: 'is-bottom-right',
+                    position: 'is-bottom-left',
                     actionText: 'HIDE',
                     indefinite: true,
                     

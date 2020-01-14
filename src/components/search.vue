@@ -6,7 +6,7 @@
                 v-model="name"
                 ref="autocomplete"
                 :data="filteredDataArray"
-                placeholder="name or email"
+                placeholder="Search name"
                 @select="option => selected = option">
                 <template slot="footer">
                     <a @click="showAddFruit">
