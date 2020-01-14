@@ -66,6 +66,8 @@
 
             </template>
     </b-table>
+    <p class="has-text-left">💡 &nbsp;You're at your plan limit of 1 dashboard(s).
+If you want more dashboards &nbsp;</p>
      <b-modal :active.sync="isImageModalActive" has-modal-card
                  trap-focus
                  aria-role="dialog"
