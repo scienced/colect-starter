@@ -5,19 +5,19 @@
    <section class="section">
     <div class="container">    	 
         	
-      <mainPage/>
+      <CollectionTabel/>
     </div>
   </section>
 </template>
 
 <script>
 // @ is an alias to /src
-import mainPage from '@/components/HelloWorld.vue'
+import CollectionTabel from '@/components/collections.vue'
 
 export default {
   name: 'home',
   components: {
-    mainPage
+    CollectionTabel
   },
 
   data() {
