@@ -40,7 +40,7 @@
           </div>-->
 
           <div class="level-right">
-             <p class="level-item has-text-centered"> <b-button type="is-primary " outlined @click="showShop1=!showShop1">
+             <p class="level-item has-text-centered"> <b-button type="is-primary " outlined @click="this.toggle">
             <b-icon pack="fas" icon="expand"></b-icon></b-button></p>
             <p class="level-item has-text-centered"> 
                 <b-dropdown hoverable aria-role="list" position="is-bottom-left">
@@ -56,6 +56,7 @@
           </div>
        </div>
 
+    <div class="fullscreenContent">
 
      <div class="card lookImageHolder" v-for="image in lookBookData" :id="'look' + image.id" @click="image.showshop=!image.showshop">
 
@@ -96,6 +97,8 @@
       </transition>
         </div>
 
+      </div>
+
         
      
      
@@ -104,6 +107,9 @@
 </template>
 
 <script>
+  import fullscreen from 'vue-fullscreen'
+  import Vue from 'vue'
+  Vue.use(fullscreen)
 
     
     export default {
@@ -113,6 +119,7 @@
         data() {
             return {
                 showShop1: false,
+                fullscreen: false,
                 lookBookData: [
                     { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170244495019745280/1170244495044907008/Dome_Deco.jpg', 'type': 'landscape', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27', 'showshop': false },
                     { 'id': 2, 'url': 'https://images.cmft.io/1115457393585688576/1170548128441573376/1170548128470933504/Dome_Deco2.jpg', 'type': 'landscape', 'caption': '', 'date': '2016-10-15 13:43:27', 'showshop': false, 'showsize': 'small'  },
@@ -145,7 +152,18 @@
                 
             }
         },
-        methodes: {      
+        methods: {
+          toggle () {
+            console.log('toggle')
+            this.$fullscreen.toggle(this.$el.querySelector('.fullscreenContent'), {
+              wrap: false,
+              callback: this.fullscreenChange
+            })
+          },
+
+        fullscreenChange (fullscreen) {
+            this.fullscreen = fullscreen
+          }   
         },
 
         created () {
