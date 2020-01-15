@@ -4,14 +4,14 @@
         <div class="level-left">
               
 
-        <li aria-hidden="true" class="back" type="arrow-left-icon" :to="{ path: '/' }">
+        <li aria-hidden="true" class="back" type="arrow-left-icon">
             <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><path d="M2,12a1,1,0,0,1,.29-0.71L10.59,3l1.29,1.29L5.17,11H21v2H5.17l6.71,6.71L10.59,21,2.29,12.71A1,1,0,0,1,2,12Z" class="large-icon" style="fill: currentColor"></path></svg>
         </li>
      
 
 
             <ul class="campaign-header">
-          <li class="campaign-header__campaign-group">
+          <li class="campaign-header__campaign-group" style="display: block;">
               <p class="is-size-6">
                 Lookbook
               </p>
