@@ -15,6 +15,14 @@
         </template>
 
         <template slot="end">
+
+          <b-navbar-item>
+          <b-taglist attached>
+        <b-tag type="is-dark">VERSION</b-tag>
+        <b-tag type="is-primary">0.2</b-tag>
+    </b-taglist>
+  </b-navbar-item>
+
              <b-navbar-dropdown label="COLECT.IO">
 
                 <b-navbar-item tag="router-link" :to="{ path: '/lookbook' }">
