@@ -40,7 +40,7 @@
           </div>-->
 
           <div class="level-right">
-             <p class="level-item has-text-centered"> <b-button type="is-primary " outlined>
+             <p class="level-item has-text-centered"> <b-button type="is-primary " outlined @click="showShop1=!showShop1">
             <b-icon pack="fas" icon="expand"></b-icon></b-button></p>
             <p class="level-item has-text-centered"> 
                 <b-dropdown hoverable aria-role="list" position="is-bottom-left">
@@ -57,16 +57,39 @@
        </div>
 
 
-     <div class="card lookImageHolder" v-for="image in lookBookData" :id="'look' + image.id">
+     <div class="card lookImageHolder" v-for="image in lookBookData" :id="'look' + image.id" @click="image.showshop=!image.showshop">
           <div class="card-image">
             <figure class="image">
               <img class=""  :src="image.url" :alt="image.caption">
             </figure>
           </div>
+          
+        
+
           <div class="card-content is-overlay">
              <div class="captionOverlay">{{image.caption}}</div>
           </div>
+
+          <transition name="fade">
+          <div class="is-overlay level-right" v-show="image.showshop">
+             <div class="stl">
+
+                <div class="columns is-multiline">
+                  <div class="column is-one-third" v-for="product in shopTheLookData">
+                    <img class=""  :src="product.url" :alt="product.caption">
+                    <p class="is-vbottum"> {{product.caption}}</p>
+                  </div>
+                  
+                </div>
+
+
+
+             </div>
+          </div>
+      </transition>
         </div>
+
+        
      
      
 
@@ -82,13 +105,29 @@
         },
         data() {
             return {
+                showShop1: false,
                 lookBookData: [
-                    { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170244495019745280/1170244495044907008/Dome_Deco.jpg', 'type': 'landscape', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27' },
-                    { 'id': 2, 'url': 'https://images.cmft.io/1115457393585688576/1170548128441573376/1170548128470933504/Dome_Deco2.jpg', 'type': 'landscape', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27' },
-                    { 'id': 3, 'url': 'https://images.cmft.io/1115457393585688576/1170548128609345536/1170548128642895872/Dome_Deco3.jpg', 'type': 'portrait', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27' },
-                    { 'id': 4, 'url': 'https://images.cmft.io/1115457393585688576/1170548124134019072/1170548124146606080/Dome_Deco4.jpg', 'type': 'portrait', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27' },
+                    { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170244495019745280/1170244495044907008/Dome_Deco.jpg', 'type': 'landscape', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27', 'showshop': false },
+                    { 'id': 2, 'url': 'https://images.cmft.io/1115457393585688576/1170548128441573376/1170548128470933504/Dome_Deco2.jpg', 'type': 'landscape', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27', 'showshop': false  },
+                    { 'id': 3, 'url': 'https://images.cmft.io/1115457393585688576/1170548128609345536/1170548128642895872/Dome_Deco3.jpg', 'type': 'portrait', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27', 'showshop': false  },
+                    { 'id': 4, 'url': 'https://images.cmft.io/1115457393585688576/1170548124134019072/1170548124146606080/Dome_Deco4.jpg', 'type': 'portrait', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27' , 'showshop': false },
                     
                 ],
+
+                shopTheLookData: [
+                 { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png', 'caption': 'Stool 864532', 'date': '2016-10-15 13:43:27' },
+                 { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png', 'caption': 'Cups 86332', 'date': '2016-10-15 13:43:27' },
+                 { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png', 'caption': 'Jams 864544', 'date': '2016-10-15 13:43:27' },
+                 { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170586772703416320/1170586772724387840/image.png', 'caption': 'Produc 8645326', 'date': '2016-10-15 13:43:27' },
+                  { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png', 'caption': 'Stool 864532', 'date': '2016-10-15 13:43:27' },
+                 { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png', 'caption': 'Cups 86332', 'date': '2016-10-15 13:43:27' },
+                 { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png', 'caption': 'Jams 864544', 'date': '2016-10-15 13:43:27' },
+                 
+
+
+
+                ]
+
                 
             }
         },
@@ -106,6 +145,7 @@
 }
 .lookImageHolder {
   margin-bottom: 1.2rem;
+  cursor: pointer;
 }
 
 .lookImage {
@@ -136,6 +176,22 @@
     list-style-type: none;
 }
 
+.stl {
+        height: 100%;
+    background-color: white;
+    width: 40%;
+    padding: 1.3rem;
+    text-align: left;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: all .7s ease;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  transform: translateX(30px);
+  opacity: 0;
+  
+}
 
 
 </style>
