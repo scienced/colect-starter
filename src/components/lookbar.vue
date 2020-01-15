@@ -45,7 +45,7 @@
             <p class="level-item has-text-centered"> 
                 <b-dropdown hoverable aria-role="list" position="is-bottom-left">
                     <button class="button is-primary has-text-centered" slot="trigger">
-                        <span>Look 1-4</span>
+                        <span>Look 1-{{lookBookData.length}}</span>
                         <b-icon icon="caret-down"></b-icon>
                     </button>
                     <b-dropdown-item aria-role="listitem" v-for="image in lookBookData" v-scroll-to="'#look'+image.id">Look {{image.id}}</b-dropdown-item>
@@ -62,15 +62,18 @@
     
 
 
-          <div class="card-image">
-            <figure class="image">
-              <img v-lazy="image.url">
-            </figure>
+          <div class="card-image tol">
+            <!--<div class="hero__visual" v-bind:style="{ backgroundImage: 'url(' + image.url + ')' }">-->
+
+
+              <div class="hero__visual"  v-lazy:background-image="image.url">
+
+            </div>
           </div>
           
         
 
-          <div class="card-content is-overlay" v-if="image.caption != ''">
+          <div class=" is-overlay" v-if="image.caption != ''">
              <div class="captionOverlay">{{image.caption}}</div>
           </div>
 
@@ -112,7 +115,7 @@
                 showShop1: false,
                 lookBookData: [
                     { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170244495019745280/1170244495044907008/Dome_Deco.jpg', 'type': 'landscape', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27', 'showshop': false },
-                    { 'id': 2, 'url': 'https://images.cmft.io/1115457393585688576/1170548128441573376/1170548128470933504/Dome_Deco2.jpg', 'type': 'landscape', 'caption': '', 'date': '2016-10-15 13:43:27', 'showshop': false  },
+                    { 'id': 2, 'url': 'https://images.cmft.io/1115457393585688576/1170548128441573376/1170548128470933504/Dome_Deco2.jpg', 'type': 'landscape', 'caption': '', 'date': '2016-10-15 13:43:27', 'showshop': false, 'showsize': 'small'  },
                     { 'id': 3, 'url': 'https://images.cmft.io/1115457393585688576/1170548128609345536/1170548128642895872/Dome_Deco3.jpg', 'type': 'portrait', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27', 'showshop': false  },
                     { 'id': 4, 'url': 'https://images.cmft.io/1115457393585688576/1170548124134019072/1170548124146606080/Dome_Deco4.jpg', 'type': 'portrait', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27' , 'showshop': false },
                     
@@ -130,7 +133,14 @@
 
 
 
-                ]
+                ],
+                shopTheLookData2: [
+                 { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png', 'caption': 'Stool 864532', 'date': '2016-10-15 13:43:27' },
+                 { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png', 'caption': 'Cups 86332', 'date': '2016-10-15 13:43:27' },
+                 { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png', 'caption': 'Jams 864544', 'date': '2016-10-15 13:43:27' },
+         
+                ],
+
 
                 
             }
@@ -184,7 +194,7 @@
 .stl {
         height: 100%;
     background-color: white;
-    width: 40%;
+    width: 50%;
     padding: 1.3rem;
     text-align: left;
 }
@@ -198,5 +208,18 @@
   
 }
 
+.tol {
+  height: 100vh;
+}
+
+.hero__visual {
+      position: absolute;
+    top: 0;
+    left: 0;
+        background: no-repeat 50%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
 
 </style>
