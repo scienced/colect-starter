@@ -10,7 +10,25 @@
                  <br>
 
 
+
+
         </b-message>
+
+        <div style="text-align: left;">
+        <p class="subtitle">Todos:</p>
+        <div class="list is-hoverable">
+          <li class="list-item">Responsive mobile version</li>
+          <li class="list-item">Lazy loading lookbook & product images</li>
+          <li class="list-item">Full screen mode</li>
+          <li class="list-item">Portrait images slide by slide</li>
+          <li class="list-item">Better layout of shop-the-look product grid</li> 
+          <li class="list-item">Refactor lookbook code into smaller components</li>
+          <li class="list-item">Get data from mockup api & use state management (VUEX)</li>
+          <li class="list-item">Lookbook overview grid/table page</li>
+        </div>
+      </div>
+
+
 
          
     </section>
@@ -23,17 +41,10 @@
                 isActive: true
             }
         }
-    }
+    };
 </script>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
+<style>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
