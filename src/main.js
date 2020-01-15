@@ -27,6 +27,9 @@ Vue.use(Buefy, {
   defaultIconPack: 'fas',
 });
 
+const VueScrollTo = require('vue-scrollto')
+Vue.use(VueScrollTo)
+
 
 //Vue.use(Buefy)
 

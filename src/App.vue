@@ -33,6 +33,10 @@
 
 
 <style lang="scss">
+
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
+
+
 // Import Bulma's core
 @import "~bulma/sass/utilities/_all";
 

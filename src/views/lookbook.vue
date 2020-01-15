@@ -4,15 +4,6 @@
    <div class="container is-fluid">   
     <lookBar/>
 
-    <div class="lookImages">
-      <img src="https://images.cmft.io/1115457393585688576/1170244495019745280/1170244495044907008/Dome_Deco.jpg">
-     </div> 
-     <div class="lookImages">
-      <img src="https://images.cmft.io/1115457393585688576/1170244495019745280/1170244495044907008/Dome_Deco.jpg">
-     </div>
-     <div class="lookImages">
-      <img src="https://images.cmft.io/1115457393585688576/1170244495019745280/1170244495044907008/Dome_Deco.jpg">
-     </div>
    </div>
 
    </section>
