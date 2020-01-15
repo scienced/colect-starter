@@ -4,9 +4,10 @@
         <div class="level-left">
               
 
-        <li aria-hidden="true" class="back" type="arrow-left-icon">
+      
+        <router-link to="/"> <li aria-hidden="true" class="back" type="arrow-left-icon" @click="counter += 1">
             <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><path d="M2,12a1,1,0,0,1,.29-0.71L10.59,3l1.29,1.29L5.17,11H21v2H5.17l6.71,6.71L10.59,21,2.29,12.71A1,1,0,0,1,2,12Z" class="large-icon" style="fill: currentColor"></path></svg>
-        </li>
+        </li></router-link>
      
 
 
@@ -56,7 +57,9 @@
           </div>
        </div>
 
-    <div class="fullscreenContent">
+    <div class="fullscreenContent" @keydown.esc="counter += 1">
+
+      
 
      <div class="card lookImageHolder" v-for="image in lookBookData" :id="'look' + image.id" @click="image.showshop=!image.showshop">
 
@@ -76,6 +79,10 @@
 
           <div class=" is-overlay" v-if="image.caption != ''">
              <div class="captionOverlay">{{image.caption}}</div>
+          </div>
+
+           <div class=" is-overlay" v-if="fullscreen">
+             <div class="buttonOverlay"> <b-button type="is-primary" outlined>Previous</b-button><b-button type="is-primary" outlined>Next</b-button></div>
           </div>
 
           <transition name="fade">
@@ -120,6 +127,7 @@
             return {
                 showShop1: false,
                 fullscreen: false,
+                counter: 0,
                 lookBookData: [
                     { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170244495019745280/1170244495044907008/Dome_Deco.jpg', 'type': 'landscape', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27', 'showshop': false },
                     { 'id': 2, 'url': 'https://images.cmft.io/1115457393585688576/1170548128441573376/1170548128470933504/Dome_Deco2.jpg', 'type': 'landscape', 'caption': '', 'date': '2016-10-15 13:43:27', 'showshop': false, 'showsize': 'small'  },
@@ -163,7 +171,8 @@
 
         fullscreenChange (fullscreen) {
             this.fullscreen = fullscreen
-          }   
+          },
+
         },
 
         created () {
@@ -192,6 +201,13 @@
     padding: 1rem;
     text-align: left;
     font-family: 'Source Serif Pro', serif;
+}
+
+.buttonOverlay {
+  color: white;
+    
+    background-color: #17161680;
+    padding: 1rem;
 }
 
 .campaign-header{

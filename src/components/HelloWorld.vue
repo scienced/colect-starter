@@ -26,7 +26,7 @@
           <li class="list-item">Get data from mockup api & use state management (VUEX)</li>
           <li class="list-item">Lookbook overview grid/table page</li>
           <li class="list-item">Unfocus shop-the-look pannel when scrolling down</li>
-          <li class="list-item">Back button</li>
+          <li class="list-item done">Back button</li>
           <li class="list-item">API requirements documentation</li>
           <li class="list-item">Favorite a product, with toast notification</li>
           <li class="list-item">Select & deselect all products</li>
