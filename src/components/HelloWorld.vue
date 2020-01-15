@@ -18,7 +18,7 @@
         <p class="subtitle">Todos:</p>
         <div class="list is-hoverable">
           <li class="list-item">Responsive mobile version</li>
-          <li class="list-item">Lazy loading lookbook & product images</li>
+          <li class="list-item done">Lazy loading images</li>
           <li class="list-item">Full screen mode</li>
           <li class="list-item">Portrait images side by side</li>
           <li class="list-item">Better layout of shop-the-look product grid, with on hover</li> 
@@ -62,5 +62,9 @@ li {
 }
 a {
   color: #42b983;
+}
+
+.done {
+  text-decoration: line-through;
 }
 </style>

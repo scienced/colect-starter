@@ -36,6 +36,8 @@
     </b-navbar>
 
     <router-view/>
+
+    
   </div>
 </template>
 

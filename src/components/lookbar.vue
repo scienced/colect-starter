@@ -58,9 +58,13 @@
 
 
      <div class="card lookImageHolder" v-for="image in lookBookData" :id="'look' + image.id" @click="image.showshop=!image.showshop">
+
+    
+
+
           <div class="card-image">
             <figure class="image">
-              <img class=""  :src="image.url" :alt="image.caption">
+              <img v-lazy="image.url">
             </figure>
           </div>
           
