@@ -59,9 +59,8 @@
 
     <div class="fullscreenContent" @keydown.esc="counter += 1">
 
-      
-
-     <div class="card lookImageHolder" v-for="image in lookBookData" :id="'look' + image.id" @click="image.showshop=!image.showshop">
+<div class="columns is-multiline">   
+     <div class="card lookImageHolder column" v-for="image in lookBookData" :key="image.id" v-bind:class="imageOr(image.landscape)" :id="'look' + image.id" >
 
     
 
@@ -69,15 +68,18 @@
           <div class="card-image tol">
             <!--<div class="hero__visual" v-bind:style="{ backgroundImage: 'url(' + image.url + ')' }">-->
 
+              <!--<lazy-component @show="handler">
+              <img class="hero__visual" :src="image.url" width="100%">
+            </lazy-component>-->
 
-              <div class="hero__visual"  v-lazy:background-image="image.url">
+              <div class="hero__visual clickable"  v-lazy:background-image="image.url" @click="image.showshop=!image.showshop"></div>
 
-            </div>
+            
           </div>
           
         
 
-          <div class=" is-overlay" v-if="image.caption != ''">
+          <div class=" is-overlay clickable" v-if="image.caption != ''" @click="image.showshop=!image.showshop">
              <div class="captionOverlay">{{image.caption}}</div>
           </div>
 
@@ -85,32 +87,47 @@
              <div class="buttonOverlay"> <b-button type="is-primary" outlined>Previous</b-button><b-button type="is-primary" outlined>Next</b-button></div>
           </div>
 
+
+
+
           <transition name="fade">
           <div class="is-overlay level-right" v-show="image.showshop">
-             <div class="stl">
+             <div class="" v-bind:class="stlOrientataion(image.landscape)">
+
+                <nav class="level">
+                     <!-- Left side -->
+                      <div class="level-left">
+                        <div class="level-item">
+                          <p class="subtitle is-5">
+                            <strong>{{shopTheLookData.length}}</strong> products
+                          </p>
+                        </div>
+                       </div>
+                       <!-- Right side -->
+                          <div class="level-right">
+                            <p class="level-item"> <b-button type="is-text" @click="image.showshop=false">CLOSE</b-button></p>
+                          </div>
+
+
+
+                </nav>
 
                 <div class="columns is-multiline">
-                  <div class="column is-one-third" v-for="product in shopTheLookData">
-                    <img class=""  :src="product.url" :alt="product.caption">
-                    <p class="is-vbottum"> {{product.caption}}</p>
+                  <div class="column is-4"  v-for="product in shopTheLookData">
+                    <productPreview :imageSrc="product.url" :caption="product.caption"></productPreview>
+
+                    <!--<img class=""  :src="product.url" :alt="product.caption">
+                    <p class="is-vbottum"> {{product.caption}}</p>-->
+
                   </div>
-                  
                 </div>
-
-
-
              </div>
           </div>
       </transition>
         </div>
-
-      </div>
-
-        
-     
-     
-
-    </div>
+</div>
+</div>
+</div>
 </template>
 
 <script>
@@ -118,10 +135,12 @@
   import Vue from 'vue'
   Vue.use(fullscreen)
 
+  import productpreview from '@/components/productpreview.vue'
+
     
     export default {
         components: {
-         
+         'productPreview': productpreview
         },
         data() {
             return {
@@ -129,10 +148,10 @@
                 fullscreen: false,
                 counter: 0,
                 lookBookData: [
-                    { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170244495019745280/1170244495044907008/Dome_Deco.jpg', 'type': 'landscape', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27', 'showshop': false },
-                    { 'id': 2, 'url': 'https://images.cmft.io/1115457393585688576/1170548128441573376/1170548128470933504/Dome_Deco2.jpg', 'type': 'landscape', 'caption': '', 'date': '2016-10-15 13:43:27', 'showshop': false, 'showsize': 'small'  },
-                    { 'id': 3, 'url': 'https://images.cmft.io/1115457393585688576/1170548128609345536/1170548128642895872/Dome_Deco3.jpg', 'type': 'portrait', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27', 'showshop': false  },
-                    { 'id': 4, 'url': 'https://images.cmft.io/1115457393585688576/1170548124134019072/1170548124146606080/Dome_Deco4.jpg', 'type': 'portrait', 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27' , 'showshop': false },
+                    { 'id': 1, 'url': 'https://images.cmft.io/1115457393585688576/1170244495019745280/1170244495044907008/Dome_Deco.jpg', 'landscape': true, 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27', 'showshop': false },
+                    { 'id': 2, 'url': 'https://images.cmft.io/1115457393585688576/1170548128441573376/1170548128470933504/Dome_Deco2.jpg', 'landscape': true, 'caption': '', 'date': '2016-10-15 13:43:27', 'showshop': false, 'showsize': 'small'  },
+                    { 'id': 3, 'url': 'https://images.cmft.io/1115457393585688576/1170548128609345536/1170548128642895872/Dome_Deco3.jpg', 'landscape': false, 'caption': '', 'date': '2016-10-15 13:43:27', 'showshop': false  },
+                    { 'id': 4, 'url': 'https://images.cmft.io/1115457393585688576/1170548124134019072/1170548124146606080/Dome_Deco4.jpg', 'landscape': false, 'caption': 'Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.', 'date': '2016-10-15 13:43:27' , 'showshop': false },
                     
                 ],
 
@@ -160,6 +179,10 @@
                 
             }
         },
+        computed: {
+            
+
+        },
         methods: {
           toggle () {
             console.log('toggle')
@@ -173,9 +196,41 @@
             this.fullscreen = fullscreen
           },
 
+        imageOr(landscape) {
+            if (landscape == true) {
+                return 'is-12'
+            } else {return 'is-6'}
+        },
+        stlOrientataion(landscape) {
+            if (landscape == true) {
+                return 'stl50'
+            } else {return 'stl100'}
+        },
+        imageOrientataion(url) {
+            let img = new Image();
+            img.src = url;
+            img.onload = () => {
+                  var landport = '' 
+                  if(img.width >= img.height) {landport = 'landscape'}
+                  if(img.width < img.height) {landport = 'portait'}
+                  console.log(landport)
+            }
+        
+        },
+
+
+        clickedonCard(imageId) {
+
+            
+
+        }
+
+        
+
         },
 
         created () {
+
         }
     };
 </script>
@@ -186,7 +241,11 @@
 }
 .lookImageHolder {
   margin-bottom: 1.2rem;
-  cursor: pointer;
+ 
+}
+
+.clickable {
+     cursor: pointer;
 }
 
 .lookImage {
@@ -225,10 +284,17 @@
      cursor: pointer;
 }
 
-.stl {
-        height: 100%;
+.stl50 {
+    height: 100%;
     background-color: white;
     width: 50%;
+    padding: 1.3rem;
+    text-align: left;
+}
+.stl100 {
+    height: 100%;
+    background-color: white;
+    width: 100%;
     padding: 1.3rem;
     text-align: left;
 }
@@ -254,6 +320,9 @@
     background-size: cover;
     width: 100%;
     height: 100%;
+}
+.column {
+    padding:0rem;
 }
 
 </style>
