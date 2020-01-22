@@ -15,6 +15,14 @@
          
         </p>
       </div>
+      <nav class="level is-mobile">
+        <div class="level-left">
+          <a class="level-item" aria-label="reply">
+            <b-icon class="media-left" icon="cart-plus" size="is-small" type="is-primary"></b-icon>
+          </a>
+          
+        </div>
+      </nav>
       
     </div>
   </article>
