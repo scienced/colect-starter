@@ -27,7 +27,11 @@
           <li class="list-item">Get data from mockup api & use state management (VUEX)</li>
           <li class="list-item">Unfocus shop-the-look pannel when scrolling down</li>
           <li class="list-item done">API requirements</li>
-          <li class="list-item">Favorite/add to cart a product</li>
+          <li class="list-item done">Favorite/add to cart a product</li>
+          <li class="list-item">Image transformation when opening Shop-the-look plane</li>
+          <li class="list-item">Test Element UI and BootstrapVue for CSS framework</li>
+          <li class="list-item">Integrate TailwindCSS</li>
+
           
         </div>
       </div>
