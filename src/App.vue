@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <b-navbar>
+    <!--<b-navbar>
         <template slot="brand">
             <b-navbar-item tag="router-link" :to="{ path: '/' }">
                 <img
@@ -33,7 +33,7 @@
             </b-navbar-item>
             </b-navbar-dropdown>
         </template>
-    </b-navbar>
+    </b-navbar>-->
 
     <router-view/>
 
