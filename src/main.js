@@ -20,12 +20,16 @@ library.add(faCheck, faCheckCircle, faInfoCircle, faExclamationTriangle, faExcla
     faEye, faEyeSlash, faCaretDown, faCaretUp, faUpload, faEdit, faPlusCircle, faEllipsisV, faTrashAlt, faExpand, faCartPlus);
 Vue.component('vue-fontawesome', FontAwesomeIcon);
 
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
-import Buefy from 'buefy'
-Vue.use(Buefy, {
-  defaultIconComponent: 'vue-fontawesome',
-  defaultIconPack: 'fas',
-});
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 
 const VueScrollTo = require('vue-scrollto')
 Vue.use(VueScrollTo)
@@ -38,6 +42,8 @@ Vue.use(VueLazyload, {
   loading: 'https://dummyimage.com/1275x705/948489/fcfcfc&text=Loading+Lookbook',
   attempt: 1
 })
+
+
 
 
 

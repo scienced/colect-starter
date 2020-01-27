@@ -1,64 +1,26 @@
 <template>
-    <div>
-      <div class="level">
-        <div class="level-left">
-      
-        <router-link to="/"> <li aria-hidden="true" class="back" type="arrow-left-icon">
-            <svg viewBox="0 0 24 24" width="24px" height="24px" x="0" y="0" preserveAspectRatio="xMinYMin meet" class="artdeco-icon" focusable="false"><path d="M2,12a1,1,0,0,1,.29-0.71L10.59,3l1.29,1.29L5.17,11H21v2H5.17l6.71,6.71L10.59,21,2.29,12.71A1,1,0,0,1,2,12Z" class="large-icon" style="fill: currentColor"></path></svg>
-        </li></router-link>
+<div>
 
-        <ul class="campaign-header">
-          <li class="campaign-header__campaign-group" style="display: block;">
-              <p class="is-size-6">
-                Lookbook
-              </p>
-          </li>
-          <li class="campaign-header2">
-              <div class="">
-                  <p class="is-size-5" title="Pitti-Uomo-IT">Authentic Winter 19/20</p>
-              </div>
-        </li>
-      </ul>
-           
-        </div>
-          <div class="level-right">
-             <p class="level-item has-text-centered"> <b-button type="is-primary " outlined @click="this.toggle">
-            <b-icon pack="fas" icon="expand"></b-icon></b-button></p>
-            <p class="level-item has-text-centered"> 
-                <b-dropdown hoverable aria-role="list" position="is-bottom-left">
-                    <button class="button is-primary has-text-centered" slot="trigger">
-                        <span>Look 1-{{lookBookData.length}}</span>
-                        <b-icon icon="caret-down"></b-icon>
-                    </button>
-                    <b-dropdown-item aria-role="listitem" v-for="image in lookBookData" v-scroll-to="'#look'+image.id">Look {{image.id}}</b-dropdown-item>
-                </b-dropdown>
-            </p>
-          </div>
-       </div>
-    <div class="fullscreenContent" @keydown.esc="counter += 1">
+<div class="fullscreenContent" @keydown.esc="counter += 1">
+ 
+     <div class="card lookImageHolder " v-for="image in lookBookData" :key="image.id" v-bind:class="imageOr(image.landscape)" :id="'look' + image.id" >
 
-<div class="columns is-multiline">   
-     <div class="card lookImageHolder column" v-for="image in lookBookData" :key="image.id" v-bind:class="imageOr(image.landscape)" :id="'look' + image.id" >
-
-    <transition name="list">
           <div class="card-image tol" >
               <div class="hero__visual clickable"  v-lazy:background-image="image.url" @click="image.showshop=!image.showshop"></div>
           </div>
-    </transition>
           
     
-          <div class=" is-overlay clickable" v-if="image.caption != ''" @click="image.showshop=!image.showshop">
+          <div class="card-img-overlay clickable align-items-end" v-if="image.caption != ''" @click="image.showshop=!image.showshop">
              <div class="captionOverlay">{{image.caption}}</div>
           </div>
 
-           <div class=" is-overlay" v-if="fullscreen">
-             <div class="buttonOverlay"> <b-button type="is-primary" outlined>Previous</b-button><b-button type="is-primary" outlined>Next</b-button></div>
-          </div>
 
 
+    <transition name="fade">
+    <div class="d-flex justify-content-end bd-highlight mb-3">
 
-          <transition name="fade">
-          <div class="is-overlay level-right" v-show="image.showshop">
+
+    <div class="card-img-overlay " v-show="image.showshop">
              <div class="" v-bind:class="stlOrientataion(image.landscape)">
 
                 <nav class="level">
@@ -87,9 +49,11 @@
                   </div>
                 </div>
              </div>
-          </div>
-      </transition>
-        </div>
+    </div>
+</div>
+
+
+    </transition>
 </div>
 </div>
 </div>
@@ -217,21 +181,6 @@
     padding: 1rem;
 }
 
-.campaign-header{
-    border-left: 1px solid rgba(0,0,0,.15);
-    padding-left: 24px;
-    justify-content: center;
-    text-align: left;
-}
-
-.back {
-    color: rgba(0,0,0,.6);
-    padding-left: 32px;
-    padding-right: 24px;
-    list-style-type: none;
-     cursor: pointer;
-}
-
 .stl50 {
     height: 100%;
     background-color: white;
@@ -280,6 +229,10 @@
 }
 .column {
     padding:0rem;
+}
+
+.card-img-overlay {
+    padding: 0rem!important;
 }
 
 </style>
