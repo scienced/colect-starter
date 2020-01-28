@@ -34,8 +34,6 @@ export default {
 .grayback {
   background-color: #f9f8f8;
 }
-.lookImages {
-  margin-top: 1rem;
-}
+
 
 </style>

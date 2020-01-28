@@ -1,38 +1,16 @@
 <template>
+
+  <div class="card mb-2 border-0"  @click="makeToast()">
    
-
-<div class=" product-box" >
-
-  <div class="cart-icon">
-          <a class="" aria-label="reply" @click="gotoProduct(caption)">
-            <b-icon class="icon-c" icon="cart-plus" size="is-small"></b-icon>
-          </a>    
+        <img class="product-img" :src="imageSrc" :alt="caption">
+    
+  <div class="card-body">
+    <h5 class="card-title">{{caption}}</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
   </div>
-  
-    <div class="">
-      <figure class="image product-img">
-        <img :src="imageSrc" :alt="caption">
-      </figure>
-    </div>
-   
-      <div class="has-text-centered product-link" @click="gotoProduct(caption)">
-        <p>
-          <strong>{{caption}}</strong> 
-         
-        </p>
-      </div>
-      <!--<nav class="level is-mobile">
-        <div class="level-left">
-          <a class="level-item" aria-label="reply">
-            <b-icon class="media-left" icon="cart-plus" size="is-small" type="is-primary"></b-icon>
-          </a>
-          
-        </div>
-      </nav>-->
-      
-  
- 
 </div>
+
+
     
 </template>
 
@@ -40,6 +18,7 @@
     export default {
         data() {
             return {
+              toastCount: 0
                 
             }
         },
@@ -58,15 +37,14 @@
             
         },
         methods: {
-            gotoProduct(url) {
-                this.$buefy.toast.open({
-                    duration: 1500,
-                    message: `Deeplink to product page: ${url}`,
-                    position: 'is-bottom',
-                    type: 'is-success'
-                })
-
-            }
+            makeToast(append = false) {
+        this.toastCount++
+        this.$bvToast.toast(`This is toast number ${this.toastCount}`, {
+          title: this.caption,
+          autoHideDelay: 5000,
+          appendToast: append
+        })
+      }
         
         }
     };
@@ -84,8 +62,8 @@
 }
 
 .product-img {
-    width: 128px;
-    height: 128px;
+    width: 130px;
+    height: 130px;
     margin-left: auto;
     margin-right: auto;
 }
