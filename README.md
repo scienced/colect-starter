@@ -1,6 +1,8 @@
 # Lookbook poc
 VueJs component build with BootstrapVue for lookbook & shop the look functionality via rest api. Can easily be integrated in legacy (server generated) html pages. 
 
+[Demo](https://5e302ee35eba8f000a730b07--wizardly-agnesi-24855a.netlify.com/)
+
 ## Project setup
 ```
 npm install
