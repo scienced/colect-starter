@@ -20,8 +20,7 @@ npm run build
 
 ### Customize configuration
 * Theming: customer specific colors, fonts, dropshadows, borders & radius can be configured in file custom.sass 
-* Endpoint configuration: tbd
-* Initial setup: tbd
+* Configuration / setup (endpoint, security & collectionId): tbd
 
 ### Test REST API
 * Kookbook looks: http://my-json-server.typicode.com/scienced/colect-starter/looks
@@ -32,7 +31,8 @@ npm run build
 - [ ] Image orientation detection
 - [x] Get data from mockup api & use state management (VUEX)
 - [ ] Custom styling / themes configuration support
-- [ ] Configuration / setup / documentation
+- [ ] Configuration / setup / documentation (via Docusaurus or Gitbook?)
+- [ ] Migrate to Bitbucket with Integrated CI/CD 
 
 ### Code architecture
 ![Code buildup](https://images.cmft.io/1115457393585688576/1175318243066388480/1175318243091554304/image.png)
