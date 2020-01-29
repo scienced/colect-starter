@@ -2,7 +2,7 @@
 
 	 <div class="d-flex justify-content-end py-2">
 	    	
-            <b-button  variant="primary mr-1" outlined @click="this.toggle" v-b-popover.hover.bottom="'Fullscreen mode is still in development'">
+            <b-button  variant="primary mr-1 d-none d-sm-inline" outlined @click="this.toggle" v-b-popover.hover.bottom="'Fullscreen mode is still in development'">
             <b-icon-arrows-fullscreen></b-icon-arrows-fullscreen>
             </b-button>
 
