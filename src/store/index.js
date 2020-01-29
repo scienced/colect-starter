@@ -23,11 +23,14 @@ export default new Vuex.Store({
   },
   actions: {
   	loadLooks({commit}) {
+  	return new Promise((resolve, reject) => {
     Vue.axios.get('looks').then(result => {
       commit('SAVE_LOOKS', result.data);
-    }).catch(error => {
-      throw new Error(`API ${error}`);
+      resolve(result);
+    }, error => {
+      reject(error);
     });
+   })
   },
   loadStl({commit}) {
     Vue.axios.get('shopthelook').then(result => {

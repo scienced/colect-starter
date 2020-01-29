@@ -2,7 +2,13 @@
    <section class="section grayback">
      	 
    <b-container fluid>
+    
     <lookNav/></lookNav>
+
+    
+      <b-spinner class="spinner-position" variant="primary" label="Loadig lookbook data" type="grow" v-show="loading"></b-spinner>
+  
+
     <looks/></looks>
   </b-container>
 
@@ -23,20 +29,35 @@ export default {
   },
 
   data() {
-            return {
-                isActive: true
+      return {
+                isActive: true,
+                loading: true,
             }
         },
   created() {
-  this.$store.dispatch('loadLooks');
+  this.loadApi()
   this.$store.dispatch('loadStl');
-}
+  },
+  methods: {
+    async loadApi() {
+      this.loading = true
+      await this.$store.dispatch('loadLooks')
+      this.loading = false
+    }
+  }
 };
 </script>
 
 <style>
 .grayback {
   background-color: #f9f8f8;
+}
+
+.spinner-position {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    z-index: 200000;
 }
 
 
