@@ -1,14 +1,8 @@
 <template>
 
-	  <b-row align-h="between" class="py-2">
-	    <b-col cols="3" class="text-left">
-
-	    </b-col>
-
-
-	    <b-col cols="3" class="text-right">
+	 <div class="d-flex justify-content-end py-2">
 	    	
-            <b-button variant="primary mr-1" outlined @click="this.toggle">
+            <b-button  variant="primary mr-1" outlined @click="this.toggle" v-b-popover.hover.bottom="'Fullscreen mode is still in development'">
             <b-icon-arrows-fullscreen></b-icon-arrows-fullscreen>
             </b-button>
 
@@ -16,9 +10,10 @@
             <b-dropdown :text="'Looks 1-' + lookBookData.length" variant="primary">
                     <b-dropdown-item aria-role="listitem" v-for="image in lookBookData" v-scroll-to="'#look'+image.id">Look {{image.id}}</b-dropdown-item>
             </b-dropdown>
-            
-	    </b-col>
-	  </b-row>
+      </div>      
+
+
+
  </template>
 <script>
     export default {

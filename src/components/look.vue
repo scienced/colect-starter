@@ -1,7 +1,7 @@
 <template>
 <div>
 
-     <div class="card look-image-holder clickable border background-visual" :id="'look' + image.id" v-lazy:background-image="image.url" v-b-visible.250="visibleHandler">
+     <div class="card look-image-holder clickable border background-visual" :id="'look' + image.id" v-lazy:background-image="image.url" v-b-visible="visibleHandler">
 
        <div class="card-img-overlay caption-body">
         <div class="caption-overlay">{{image.caption}}</div>
