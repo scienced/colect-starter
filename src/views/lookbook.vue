@@ -1,22 +1,25 @@
 <template>
    <section class="section grayback">
      	 
-   <div class="container is-fluid">   
-    <lookBar/>
+   <b-container fluid>
+    <lookNav/></lookNav>
+    <looks/></looks>
+  </b-container>
 
-   </div>
 
    </section>
 </template>
 
 <script>
 // @ is an alias to /src
-import lookBar from '@/components/lookbar.vue'
+import lookNav from '@/components/looknav.vue'
+import looks from '@/components/looks.vue'
 
 export default {
   name: 'home',
   components: {
-    lookBar
+    'lookNav': lookNav,
+     'looks': looks
   },
 
   data() {
@@ -31,8 +34,6 @@ export default {
 .grayback {
   background-color: #f9f8f8;
 }
-.lookImages {
-  margin-top: 1rem;
-}
+
 
 </style>

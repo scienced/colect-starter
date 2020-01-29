@@ -4,28 +4,14 @@ import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
-//import Buefy from 'buefy'
-//import 'buefy/dist/buefy.css'
 
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-// internal icons
-import { faCheck, faCheckCircle, faInfoCircle, faExclamationTriangle, faExclamationCircle,
-    faArrowUp, faAngleRight, faAngleLeft, faAngleDown,
-    faEye, faEyeSlash, faCaretDown, faCaretUp, faUpload, faEdit, faPlusCircle, faEllipsisV, faTrashAlt, faExpand, faCartPlus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+// Install BootstrapVue
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
 
-library.add(faCheck, faCheckCircle, faInfoCircle, faExclamationTriangle, faExclamationCircle,
-    faArrowUp, faAngleRight, faAngleLeft, faAngleDown,
-    faEye, faEyeSlash, faCaretDown, faCaretUp, faUpload, faEdit, faPlusCircle, faEllipsisV, faTrashAlt, faExpand, faCartPlus);
-Vue.component('vue-fontawesome', FontAwesomeIcon);
-
-
-import Buefy from 'buefy'
-Vue.use(Buefy, {
-  defaultIconComponent: 'vue-fontawesome',
-  defaultIconPack: 'fas',
-});
 
 const VueScrollTo = require('vue-scrollto')
 Vue.use(VueScrollTo)
@@ -38,7 +24,6 @@ Vue.use(VueLazyload, {
   loading: 'https://dummyimage.com/1275x705/948489/fcfcfc&text=Loading+Lookbook',
   attempt: 1
 })
-
 
 
 new Vue({
