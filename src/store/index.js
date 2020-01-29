@@ -6,7 +6,7 @@ import VueAxios from "vue-axios";
 Vue.use(Vuex)
 Vue.use(VueAxios, axios);
 
-Vue.axios.defaults.baseURL = "http://my-json-server.typicode.com/scienced/colect-starter/";
+Vue.axios.defaults.baseURL = "https://my-json-server.typicode.com/scienced/colect-starter/";
 
 export default new Vuex.Store({
   state: {
