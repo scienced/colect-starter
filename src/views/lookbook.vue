@@ -26,7 +26,11 @@ export default {
             return {
                 isActive: true
             }
-        }
+        },
+  created() {
+  this.$store.dispatch('loadLooks');
+  this.$store.dispatch('loadStl');
+}
 };
 </script>
 

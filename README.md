@@ -1,7 +1,7 @@
 # Lookbook poc
 VueJs component build with BootstrapVue for lookbook & shop the look functionality via rest api. Can easily be integrated in legacy (server generated) html pages. 
 
-[Demo](https://5e302ee35eba8f000a730b07--wizardly-agnesi-24855a.netlify.com/)
+[Demo](https://wizardly-agnesi-24855a.netlify.com/)
 
 ## Project setup
 ```
@@ -23,11 +23,16 @@ npm run build
 * Endpoint configuration: tbd
 * Initial setup: tbd
 
+### Test REST API
+* Kookbook looks: http://my-json-server.typicode.com/scienced/colect-starter/looks
+* Shop-the-look products: http://my-json-server.typicode.com/scienced/colect-starter/shopthelook
+
 ### Todo
 - [ ] Fullscreen mode
 - [ ] Image orientation detection
-- [ ] Get data from mockup api & use state management (VUEX)
+- [x] Get data from mockup api & use state management (VUEX)
 - [ ] Custom styling / themes configuration support
+- [ ] Configuration / setup / documentation
 
 ### Code architecture
 ![Code buildup](https://images.cmft.io/1115457393585688576/1175318243066388480/1175318243091554304/image.png)
