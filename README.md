@@ -23,13 +23,13 @@ npm run build
 
 * Initial setup (i18n locale, api base url, securitytoken & collectionId). Insert script below into the server generated html to pass initial variables into application.
 ```
-<script id="config" type="application/json">{"locale":"en","baseURL":"http:\/\/my-json-server.typicode.com/scienced/colect-starter","sessionid":"1234339978", "collectionid":"32763"}
+<script id="config" type="application/json">{"locale":"en","baseURL":"https:\/\/my-json-server.typicode.com/scienced/colect-starter","sessionid":"1234339978", "collectionid":"32763"}
 </script>
 ```
 
 ### Test REST API
-* Lookbook looks: http://my-json-server.typicode.com/scienced/colect-starter/looks
-* Shop-the-look products: http://my-json-server.typicode.com/scienced/colect-starter/shopthelook
+* Lookbook looks: https://my-json-server.typicode.com/scienced/colect-starter/looks
+* Shop-the-look products: https://my-json-server.typicode.com/scienced/colect-starter/shopthelook
 
 
 ### Todo
