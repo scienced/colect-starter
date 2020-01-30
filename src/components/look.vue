@@ -16,7 +16,7 @@
          <transition name="fade">
                 <div class="stl100 rounded-right" v-show="showshop">
 
-                    <div class="text-right"><b-button variant="link" @click="showshop=false"> <b-icon-x-circle></b-icon-x-circle>CLOSE</b-button></p></div>
+                    <div class="text-right"><b-button variant="link" @click="showshop=false"> <b-icon-x-circle></b-icon-x-circle>{{ $t("close") }}</b-button></p></div>
                     
                     <div class="row">
                       <div class="col-md-6"  v-for="product in this.$store.state.stl">

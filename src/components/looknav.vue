@@ -2,14 +2,15 @@
 
 	 <div class="d-flex justify-content-end py-2">
 	    	
-            <b-button  variant="primary mr-1 d-none d-sm-inline" outlined v-b-popover.hover.bottom="'Fullscreen mode is still in development'">
+            <b-button  variant="primary mr-1 d-none d-sm-inline" outlined v-b-popover.hover.bottom="$t('fulldev')">
             <b-icon-arrows-fullscreen></b-icon-arrows-fullscreen>
             </b-button>
 
             
-            <b-dropdown :text="'Looks 1-' + this.$store.state.looks.length" variant="primary">
-                    <b-dropdown-item aria-role="listitem" v-for="image in this.$store.state.looks" v-scroll-to="'#look'+image.id">Look {{image.id}}</b-dropdown-item>
+            <b-dropdown :text="$tc('look',2) + ' 1-' + this.$store.state.looks.length" variant="primary">
+                    <b-dropdown-item aria-role="listitem" v-for="image in this.$store.state.looks" v-scroll-to="'#look'+image.id">{{ $tc("look",1) }} {{image.id}}</b-dropdown-item>
             </b-dropdown>
+            
       </div>      
 
 

@@ -28,13 +28,33 @@ Vue.use(VueLazyload, {
 //load config
 const configElement = document.getElementById( 'config' );
 const config = JSON.parse( configElement.innerHTML );
-const i18n = config.locale;
-const baseURL = config.baseURL;
+const baseURL = config.baseURL; //save baseurl to VUEX (todo)
 
-console.log(baseURL)
+
+
+//load VueI18n, later in aparte plugin en languange files zetten voor overzichtelijkheid
+import VueI18n from 'vue-i18n'
+Vue.use(VueI18n)
+export const i18n = new VueI18n({
+  locale: config.locale,
+  fallbackLocale: 'en',
+
+  messages: { en: {     
+    close: 'close',
+    look: 'look | looks',
+    fulldev: 'Fullscreen mode is still in development'    
+  },   
+  fr: {         
+   close: 'proche',
+   look: 'regard | regards',
+   fulldev: 'Le mode plein écran est toujours en développement'   
+  }  }
+})
+
 
 new Vue({
 //  router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')
