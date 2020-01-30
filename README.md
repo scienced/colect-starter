@@ -20,19 +20,27 @@ npm run build
 
 ### Customize configuration
 * Theming: customer specific colors, fonts, dropshadows, borders & radius can be configured in file custom.sass 
-* Configuration / setup (endpoint, security & collectionId): tbd
+
+* Initial setup (i18n locale, api base url, securitytoken & collectionId). Insert script below into the server generated html to pass initial variable to the Vuejs application.
+```
+<script id="config" type="application/json">{"locale":"en","baseURL":"http:\/\/my-json-server.typicode.com/scienced/colect-starter","sessionid":"1234339978", "collectionid":"32763"}
+</script>
+```
 
 ### Test REST API
 * Kookbook looks: http://my-json-server.typicode.com/scienced/colect-starter/looks
 * Shop-the-look products: http://my-json-server.typicode.com/scienced/colect-starter/shopthelook
 
+
 ### Todo
-- [ ] Fullscreen mode
-- [ ] Image orientation detection
-- [x] Get data from mockup api & use state management (VUEX)
+- [ ] Fullscreen mode (seperate component)
+- [ ] Automatic image orientation 
+- [X] Get data from mockup api & use state management (VUEX)
 - [ ] Custom styling / themes configuration support
-- [ ] Configuration / setup / documentation (via Docusaurus or Gitbook?)
+- [X] Configuration / initial setup 
+- [ ] Documentation (via Docusaurus or Vuepress?)
 - [ ] Migrate to Bitbucket with Integrated CI/CD 
+- [ ] i18n multi language support 
 
 ### Code architecture
 ![Code buildup](https://images.cmft.io/1115457393585688576/1175318243066388480/1175318243091554304/image.png)

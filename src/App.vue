@@ -1,12 +1,21 @@
 <template>
   <div id="app">
 
-    <router-view/>
+    <lookbook/>
 
-    
   </div>
 </template>
 
+<script>
+import lookbook from './views/lookbook.vue'
+
+export default {
+  name: 'app',
+  components: {
+    lookbook
+  }
+};
+</script>
 
 <style lang="scss">
 // Define your variable overrides here

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
+//import router from './router'
 import store from './store'
 
 Vue.config.productionTip = false
@@ -25,9 +25,16 @@ Vue.use(VueLazyload, {
   attempt: 1
 })
 
+//load config
+const configElement = document.getElementById( 'config' );
+const config = JSON.parse( configElement.innerHTML );
+const i18n = config.locale;
+const baseURL = config.baseURL;
+
+console.log(baseURL)
 
 new Vue({
-  router,
+//  router,
   store,
   render: h => h(App)
 }).$mount('#app')
