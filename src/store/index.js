@@ -6,12 +6,16 @@ import VueAxios from "vue-axios";
 Vue.use(Vuex)
 Vue.use(VueAxios, axios);
 
-Vue.axios.defaults.baseURL = "https://my-json-server.typicode.com/scienced/colect-starter/";
+const configElement = document.getElementById( 'config' );
+const config = JSON.parse( configElement.innerHTML );
+Vue.axios.defaults.baseURL = config.baseURL;
 
 export default new Vuex.Store({
   state: {
   	 looks: [],
-  	 stl: []
+  	 stl: [],
+     sessionid: config.sessionid,
+     collectionid: config.collectionid
   },
   mutations: {
   	SAVE_LOOKS(state, looks) {

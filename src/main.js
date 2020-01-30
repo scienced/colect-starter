@@ -27,16 +27,14 @@ Vue.use(VueLazyload, {
 
 //load config
 const configElement = document.getElementById( 'config' );
-const config = JSON.parse( configElement.innerHTML );
-const baseURL = config.baseURL; //save baseurl to VUEX (todo)
-
+const configi = JSON.parse( configElement.innerHTML );
 
 
 //load VueI18n, later in aparte plugin en languange files zetten voor overzichtelijkheid
 import VueI18n from 'vue-i18n'
 Vue.use(VueI18n)
 export const i18n = new VueI18n({
-  locale: config.locale,
+  locale: configi.locale,
   fallbackLocale: 'en',
 
   messages: { en: {     
