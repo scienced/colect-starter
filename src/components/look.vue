@@ -97,7 +97,7 @@
 }
 
 .caption-body {
-    padding: 0rem;
+    padding: 0rem!important;
 } 
 
 .stl50 {

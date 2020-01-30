@@ -38,8 +38,6 @@ npm run build
 - [X] Get data from mockup api & use state management (VUEX)
 - [ ] Custom styling / themes configuration support
 - [X] Configuration / initial setup 
-- [ ] Documentation (via Docusaurus or Vuepress?)
-- [ ] Migrate to Bitbucket with Integrated CI/CD 
 - [x] i18n multi language support
 
 ### Code architecture

@@ -1,11 +1,11 @@
 <template>
 
-  <div class="card mb-2 border-0"  @click="makeToast()">
+  <div class="card mb-2 border-0 text-center"  @click="makeToast()">
    
         <img class="product-img" :src="imageSrc" :alt="caption">
     
   <div class="card-body">
-    <h5 class="card-title">{{caption}}</h5>
+    <h4 class="card-title product-title">{{caption}}</h4>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
   </div>
 </div>
@@ -68,13 +68,8 @@
     margin-right: auto;
 }
 
-.cart-icon {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-}
-.icon-c {
-      color: #e8e8e8 !important;
+.product-title {
+ 
 }
 
 </style>
