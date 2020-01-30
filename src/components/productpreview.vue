@@ -5,8 +5,8 @@
         <img class="product-img" :src="imageSrc" :alt="caption">
     
   <div class="card-body">
-    <h4 class="card-title product-title">{{caption}}</h4>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <h4 class="card-title ">{{caption}}</h4>
+    <p class="card-text product-title">With supporting text below as a natural lead-in to additional content.</p>
   </div>
 </div>
 
@@ -69,7 +69,7 @@
 }
 
 .product-title {
- 
+
 }
 
 </style>

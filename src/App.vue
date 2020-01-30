@@ -18,12 +18,12 @@ export default {
 </script>
 
 <style lang="scss">
-// Define your variable overrides here
-$primary: #45C8EF;
+@import 'assets/custom-vars.scss';
 
-
-@import '~bootstrap/dist/css/bootstrap.css';
-@import '~bootstrap-vue/dist/bootstrap-vue.css';
+// Bootstrap and its default variables
+@import '../node_modules/bootstrap/scss/bootstrap';
+// BootstrapVue and its default variables
+@import '../node_modules/bootstrap-vue/src/index.scss';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -32,5 +32,6 @@ $primary: #45C8EF;
   text-align: center;
   color: #2c3e50;
 }
+
 
 </style>
