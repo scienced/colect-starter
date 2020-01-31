@@ -19,8 +19,8 @@ npm run build
 ```
 
 ### Customize configuration
-* Theming: customer specific colors, fonts, dropshadows, borders & radius can be configured in assets/custom-vars.scss. Changes effected at buildtime. You can find additional variables that control various aspects of BootstrapVue's custom CSS at [bootstrap-vue/src/_variables.scss](https://github.com/bootstrap-vue/bootstrap-vue/blob/master/src/_variables.scss).
-* Initial setup (i18n locale, api base url, securitytoken & collectionId). Insert script below into the server generated html to pass initial variables into application.
+* **Theming:** customer specific colors, fonts, dropshadows, borders & radius can be configured in assets/custom-vars.scss. Changes effected at buildtime. You can find additional variables that control various aspects of BootstrapVue's custom CSS at [bootstrap-vue/src/_variables.scss](https://github.com/bootstrap-vue/bootstrap-vue/blob/master/src/_variables.scss).
+* **Initial variables setup** (i18n locale, api base url, securitytoken & collectionId). Insert script below into the server generated html to pass initial variables into application.
 ```
 <script id="config" type="application/json">{"locale":"en","baseURL":"https:\/\/my-json-server.typicode.com/scienced/colect-starter","sessionid":"1234339978", "collectionid":"32763"}
 </script>
@@ -29,6 +29,7 @@ npm run build
 ### Test REST API
 * Lookbook looks: https://my-json-server.typicode.com/scienced/colect-starter/looks
 * Shop-the-look products: https://my-json-server.typicode.com/scienced/colect-starter/shopthelook
+Lookbook images measurements are ipad 3 or higher: at least 1536 * 2048 (w * h) pixels
 
 
 ### Todo
