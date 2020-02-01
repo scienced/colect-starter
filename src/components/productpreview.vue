@@ -41,6 +41,7 @@
         this.toastCount++
         this.$bvToast.toast(`This is toast number ${this.toastCount}`, {
           title: this.caption,
+          variant: "primary",
           autoHideDelay: 5000,
           appendToast: append
         })
