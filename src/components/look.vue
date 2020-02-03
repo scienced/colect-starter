@@ -6,7 +6,7 @@
        
      <video v-show="image.video" class="c-look-video" :poster="image.url" preload="none" autoplay="autoplay" playsinline="" loop="loop" muted="muted"><source :src="image.url"></video>
 
-      <img  v-show="!image.video" class="c-look-image" v-lazy="image.url" alt="" />
+      <b-img-lazy  v-show="!image.video" class="c-look-image" :src="image.url" alt=""></b-img-lazy>
      
 
        <div v-show="image.caption" class="card-img-overlay caption-body">
@@ -14,22 +14,22 @@
        </div>
 
       <div class="row full-height no-gutters overflow-hidden clickable" >
-        <div class="col-md-6 " @click.self="showshop=!showshop">
+        <div class="col-sm-9 col-md-9 col-lg-10 " @click.self="showshop=!showshop">
           
         </div>
 
-        <div class="col-md-6" @click.self="showshop=!showshop">
+        <div class="col-sm-3 col-md-3 col-lg-2" @click.self="showshop=!showshop">
          <transition name="fade">
                 <div class="stl100 rounded-right" v-show="showshop">
 
                     <div class="text-right"><b-button variant="link" @click="showshop=false"> <b-icon-x-circle></b-icon-x-circle>{{ $t("close") }}</b-button></p></div>
                     
-                    <div class="row">
-                      <div class="col-md-6"  v-for="product in this.$store.state.stl">
-                        <productPreview :imageSrc="product.url" :caption="product.caption"></productPreview>
-
+                    
+                      <div class="d-flex flex-wrap c-prod-preview-container">
+                        
+                        <productPreview class="c-pp" v-for="product in this.$store.state.stl" :imageSrc="product.url" :caption="product.caption"></productPreview>
                       </div>
-                    </div>
+
                  
                  </div>
          </transition>
@@ -192,5 +192,13 @@
     }
 
 }
+.c-pp{
+
+      margin: 15px auto;
+    min-width: 180px!important;
+
+}
+
+
 
 </style>

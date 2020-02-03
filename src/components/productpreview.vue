@@ -5,8 +5,7 @@
         <img class="product-img" :src="imageSrc" :alt="caption">
     
   <div class="card-body">
-    <h4 class="card-title ">{{caption}}</h4>
-    <p class="card-text product-title">With supporting text below as a natural lead-in to additional content.</p>
+    <span class="card-title ">{{caption}}</span>
   </div>
 </div>
 
@@ -63,8 +62,8 @@
 }
 
 .product-img {
-    width: 130px;
-    height: 130px;
+   max-width: 150px !important;
+    max-height: 200px !important;
     margin-left: auto;
     margin-right: auto;
 }

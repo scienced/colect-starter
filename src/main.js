@@ -13,17 +13,6 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 
-const VueScrollTo = require('vue-scrollto')
-Vue.use(VueScrollTo)
-
-import VueLazyload from 'vue-lazyload'
-Vue.use(VueLazyload, {
-	lazyComponent: true,
-  preLoad: 1.3,
-  error: 'dist/error.png',
-  loading: 'https://dummyimage.com/1275x705/948489/fcfcfc&text=Loading+Lookbook',
-  attempt: 1
-})
 
 //load config
 const configElement = document.getElementById( 'config' );

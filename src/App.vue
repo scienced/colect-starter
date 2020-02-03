@@ -13,7 +13,24 @@ export default {
   name: 'app',
   components: {
     lookbook
-  }
+  },
+  props: {
+            locale: {
+              type: String,
+              default: 'en'
+            },
+            baseURL: {
+              type: String,
+              default: 'https:\/\/my-json-server.typicode.com/scienced/colect-starter'
+            },
+            sessionid: {
+              type: String
+            },
+            collectionid: {
+              type: String,
+              required: true
+            },
+        },
 };
 </script>
 
