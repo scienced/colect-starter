@@ -4,13 +4,13 @@
      <div class="card look-image-holder clickable border background-visual cover"  v-b-visible="visibleHandler">
 
        
-     <video v-show="image.video" class="c-look-video" poster="image.url" preload="none" autoplay="autoplay" playsinline="" loop="loop" muted="muted"><source src="image.url"></video>
+     <video v-show="image.video" class="c-look-video" :poster="image.url" preload="none" autoplay="autoplay" playsinline="" loop="loop" muted="muted"><source :src="image.url"></video>
 
       <img  v-show="!image.video" class="c-look-image" v-lazy="image.url" alt="" />
      
 
-       <div class="card-img-overlay caption-body">
-        <div class="caption-overlay">{{image.caption}} {{image.video}}</div>
+       <div v-show="image.caption" class="card-img-overlay caption-body">
+        <div class="caption-overlay">{{image.caption}}</div>
        </div>
 
       <div class="row full-height no-gutters overflow-hidden clickable" >
