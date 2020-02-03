@@ -20,7 +20,7 @@ npm run build
 
 ### Customize configuration
 * **Theming:** customer specific colors, fonts, dropshadows, borders & radius can be configured in assets/custom-vars.scss. Changes effected at buildtime. 
-* **Parent theming** : by setting CSS variables in the server generated html, a style can be pushed from the parent html container. Use other names than the standard Bootstrap CSS variables, because these are overwriten at run time. See example of setting a CSS variable:
+* **Parent theming** : by setting [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) in the server generated html, a style can be pushed from the parent html to the vue application. Note: use other variable names than the standard Bootstrap, because these are overwriten at run time. See example of setting a CSS variable:
 ```
 <style>
 :root {

@@ -1,10 +1,16 @@
 <template>
 <div>
 
-     <div class="card look-image-holder clickable border background-visual" v-lazy:background-image="image.url" v-b-visible="visibleHandler">
+     <div class="card look-image-holder clickable border background-visual cover"  v-b-visible="visibleHandler">
+
+       
+     <video v-show="image.video" class="c-look-video" poster="image.url" preload="none" autoplay="autoplay" playsinline="" loop="loop" muted="muted"><source src="image.url"></video>
+
+      <img  v-show="!image.video" class="c-look-image" v-lazy="image.url" alt="" />
+     
 
        <div class="card-img-overlay caption-body">
-        <div class="caption-overlay">{{image.caption}}</div>
+        <div class="caption-overlay">{{image.caption}} {{image.video}}</div>
        </div>
 
       <div class="row full-height no-gutters overflow-hidden clickable" >
@@ -62,6 +68,8 @@
         methods: {
             visibleHandler(isVisible) {
               if (isVisible) {
+                //setTimeout(() => this.showshop = true, 2000);
+                
 
 
               } else {
@@ -134,6 +142,55 @@
     background-size: cover;
     width: 100%;
     height: 100%;
+}
+
+.cover {
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+
+.c-look-image, .c-look-video{
+    display: block;
+    height: auto;
+    left: auto;
+    max-width: none;
+     min-height: 100%;
+    min-width: 100%;
+    right: auto;
+    position: absolute;
+    top: 0;
+    width: auto;
+    //z-index: 1;
+}
+
+@supports (transform: translateX(-50%)) {
+
+    .c-look-image, .c-look-video{
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+}
+
+@media screen and (min-aspect-ratio: 16/9){/* Make this the same aspect ratio as your video */
+
+    .c-look-image, .c-look-video{
+        max-width: 100vw;
+        min-width: 100vw;
+        width: 100vw;
+    }
+
+}
+@media screen and (max-aspect-ratio: 16/9){/* Make this the same aspect ratio as your video */
+
+    .c-look-image, .c-look-video {
+        height: 100vh;
+        max-height: 100vh;
+        min-height: 100vh;
+    }
+
 }
 
 </style>

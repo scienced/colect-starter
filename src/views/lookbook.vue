@@ -12,6 +12,9 @@
 
      <look v-for="(image, index) in this.$store.state.looks" :image="image" class="item" :id="'look' + image.id" :class="{ 'item-first': index === 0 }"></look>
 
+   
+
+
   </b-container>
 
 
@@ -88,5 +91,7 @@ export default {
 .item-no-snap {
   scroll-snap-align: none;
 }
+
+
 
 </style>
