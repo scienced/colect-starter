@@ -7,9 +7,8 @@
 { "id": 5, "stl":5678, "url": "https://adrienhobbs.github.io/vue-lazyload-video/video/Baga-Beach.mp4", "landscape": true, "caption": "This is a video test", "date": "2016-10-15 13:43:27", "video": true }
 ],
 
-"shopthelook": 
-{
-	"1234": [
+"shopthelook1": 
+ [
 { "id": 1, "url": "https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png", "caption": "Stool 864532", "date": "2016-10-15 13:43:27" },
 { "id": 2, "url": "https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png", "caption": "Cups 86332", "date": "2016-10-15 13:43:27" },
 { "id": 3, "url": "https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png", "caption": "Jams 864544", "date": "2016-10-15 13:43:27" },
@@ -17,20 +16,12 @@
 { "id": 5, "url": "https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png", "caption": "Stool 864532", "date": "2016-10-15 13:43:27" },
 { "id": 6, "url": "https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png", "caption": "Cups 86332", "date": "2016-10-15 13:43:27" },
 { "id": 7, "url": "https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png", "caption": "Jams 864544", "date": "2016-10-15 13:43:27" }
-
 ],
 
-"5678": [
-	{ "id": 1, "url": "https://images2.cdn-colect.com/haglofs_images/convert.php/6036973U3_F18_2_back.png?resize(270x360)&ts(1579546544000)#603697_3U3_IMAGE_MODEL.png", "caption": "Stool 864532", "date": "2016-10-15 13:43:27" },
+"shopthelook2": [
+{ "id": 1, "url": "https://images2.cdn-colect.com/haglofs_images/convert.php/6036973U3_F18_2_back.png?resize(270x360)&ts(1579546544000)#603697_3U3_IMAGE_MODEL.png", "caption": "Stool 864532", "date": "2016-10-15 13:43:27" },
 { "id": 2, "url": "https://images2.cdn-colect.com/haglofs_images/convert.php/6036913TJ_F18_2.png?resize(270x360)&ts(1579546547000)#603691_3TJ_IMAGE_PRIMARY.png", "caption": "Cups 86332", "date": "2016-10-15 13:43:27" },
-{ "id": 3, "url": "https://images2.cdn-colect.com/haglofs_images/convert.php/6036983U3_F17_2.png?resize(270x360)&ts(1579546541000)#603698_3U3_IMAGE_PRIMARY.png", "caption": "Jams 864544", "date": "2016-10-15 13:43:27" },
-
+{ "id": 3, "url": "https://images2.cdn-colect.com/haglofs_images/convert.php/6036983U3_F17_2.png?resize(270x360)&ts(1579546541000)#603698_3U3_IMAGE_PRIMARY.png", "caption": "Jams 864544", "date": "2016-10-15 13:43:27" }
 ]
-
-
-}
-
-
-
 
 }
