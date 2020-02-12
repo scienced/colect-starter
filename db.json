@@ -4,17 +4,23 @@
 { "id": 2, "stl":5678, "url": "https://images.cmft.io/1115457393585688576/1170548128441573376/1170548128470933504/Dome_Deco2.jpg?w=2048&h=1536&fit=clip", "landscape": true, "caption": "", "date": "2016-10-15 13:43:27", "video": false  },
 { "id": 3, "stl":4343, "url": "https://images.cmft.io/1115457393585688576/1170548128609345536/1170548128642895872/Dome_Deco3.jpg?w=2048&h=1536&fit=clip", "landscape": false, "caption": "", "date": "2016-10-15 13:43:27", "video": false},
 { "id": 4, "stl":5678, "url": "https://images.cmft.io/1115457393585688576/1170548124134019072/1170548124146606080/Dome_Deco4.jpg?w=2048&h=1536&fit=clip", "landscape": false, "caption": "Brown colors merged with beige tones and dressed in terracotta results in an earthy, warm sophisticated style.", "date": "2016-10-15 13:43:27", "video": false },
-{ "id": 5, "stl":5678, "url": "https://adrienhobbs.github.io/vue-lazyload-video/video/Baga-Beach.mp4", "landscape": true, "caption": "This is a video test", "date": "2016-10-15 13:43:27", "video": true }
+{ "id": 5, "stl":5678, "url": "https://images.cmft.io/1115457393585688576/1180737779961831424/1180737779986997248/domedeco_winter2020_001.jpg?w=2048&h=1536&fit=clip", "landscape": true, "caption": "A refreshing take on true craftsmanship. Raw sophistication with a bright outlook. Handmade with contemporary details.", "date": "2016-10-15 13:43:27", "video": true },
+{ "id": 6, "stl":5678, "url": "https://images.cmft.io/1115457393585688576/1180737784432955392/1180737784453931008/domedeco_winter2020_007_0.jpg?w=2048&h=1536&fit=clip", "landscape": true, "caption": "A refreshing take on true craftsmanship. Raw sophistication with a bright outlook. Handmade with contemporary details.", "date": "2016-10-15 13:43:27", "video": true }
+
 ],
 
 "shopthelook1": [
-{ "id": 1, "url": "https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png", "caption": "Stool 864532", "date": "2016-10-15 13:43:27" },
-{ "id": 2, "url": "https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png", "caption": "Cups 86332", "date": "2016-10-15 13:43:27" },
-{ "id": 3, "url": "https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png", "caption": "Jams 864544", "date": "2016-10-15 13:43:27" },
-{ "id": 4, "url": "https://images.cmft.io/1115457393585688576/1170586772703416320/1170586772724387840/image.png", "caption": "Produc 8645326", "date": "2016-10-15 13:43:27" },
-{ "id": 5, "url": "https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png", "caption": "Stool 864532", "date": "2016-10-15 13:43:27" },
-{ "id": 6, "url": "https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png", "caption": "Cups 86332", "date": "2016-10-15 13:43:27" },
-{ "id": 7, "url": "https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png", "caption": "Jams 864544", "date": "2016-10-15 13:43:27" }
+{ "id": 1, "url": "https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png", "caption": "BODI STOOL ON LOW STAND WITH VELVET FABRIC", "date": "2016-10-15 13:43:27" },
+{ "id": 2, "url": "https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png", "caption": "PLATO DESK OVAL", "date": "2016-10-15 13:43:27" },
+{ "id": 3, "url": "https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png", "caption": "PLATO DESK RECTANGULAR", "date": "2016-10-15 13:43:27" },
+{ "id": 4, "url": "https://images.cmft.io/1115457393585688576/1170586772703416320/1170586772724387840/image.png", "caption": "ARC ARMCHAIR METAL FRAME WITH DAN FABRIC", "date": "2016-10-15 13:43:27" },
+{ "id": 5, "url": "https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png", "caption": "TABLELAMP METAL & LED BULB", "date": "2016-10-15 13:43:27" },
+{ "id": 6, "url": "https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png", "caption": "S/2 OVAL IRON MIRRORS", "date": "2016-10-15 13:43:27" },
+{ "id": 7, "url": "https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png", "caption": "BABA STOOL ON STAND WITH VELVET FABRIC S", "date": "2016-10-15 13:43:27" },
+{ "id": 8, "url": "https://images.cmft.io/1115457393585688576/1180738906505744384/1180738906522525696/image.png", "caption": "PLACEMAT DOUBLE STICH", "date": "2016-10-15 13:43:27" },
+{ "id": 9, "url": "https://images.cmft.io/1115457393585688576/1180738905868214272/1180738905889185792/image.png", "caption": "ABERDEEN CABINET", "date": "2016-10-15 13:43:27" },
+{ "id": 10, "url": "https://images.cmft.io/1115457393585688576/1180738912348413952/1180738912373575680/image.png", "caption": "CUTLERYSET OF 4 EACH 6PCS & GELTEX BOX", "date": "2016-10-15 13:43:27" },
+{ "id": 11, "url": "https://images.cmft.io/1115457393585688576/1180738911878647808/1180738911895425024/image.png", "caption": "RIO BUTLERTRAY", "date": "2016-10-15 13:43:27" }
 ],
 
 "shopthelook2": [
