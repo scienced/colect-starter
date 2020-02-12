@@ -1,10 +1,12 @@
 <template>
  
    <div>
-    <b-progress height="4px" :value="scroll" :max="5" class="c-progress"></b-progress>
 
+    <!--<b-progress height="4px" :value="scroll" :max="5" class="c-progress"></b-progress>-->
+<navbar></navbar>
 
    <b-container fluid class="section ">
+
     
 
       <lookNav class=""></lookNav>
@@ -19,6 +21,23 @@
 
 
   </b-container>
+
+      <!--<div class="container-w">
+      <div class="item-w">A</div>
+    <div class="item-w">b</div>
+    <div class="item-w">c</div>
+    <div class="item-w">d</div>
+    <div class="item-w">e</div>
+    <div class="item-w">f</div>
+    <div class="item-w">g</div>
+    <div class="item-w">h</div>
+    <div class="item-w">i</div>
+    <div class="item-w">j</div>
+    <div class="item-w">k</div>
+    <div class="item-w">l</div>
+    <div class="item-w">m</div>
+    </div>-->
+
 </div>
 
 
@@ -31,6 +50,7 @@ import Vue from 'vue'
 import lookNav from '@/components/looknav.vue'
 import looks from '@/components/looks.vue'
  import look from '@/components/look.vue'
+ import navbar from '@/components/navbar.vue'
 
  import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload, {
@@ -64,7 +84,8 @@ export default {
   components: {
     'lookNav': lookNav,
      'looks': looks,
-     'look': look
+     'look': look,
+     'navbar': navbar
      
 
   },
@@ -135,6 +156,34 @@ export default {
   width: 100%;
   height: 5px;
 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container-w {
+    display: flex;
+  flex-direction: row;
+
+ 
+  flex-wrap: wrap;
+   min-height: -webkit-min-content;
+  width: 300px;
+  overflow: hidden;
+  border: solid 1px red;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item-w {
+  height: auto;
+  padding: 15px;
+  width: 140px;
+  border: solid 1px #000;
+  flex: 1 1 45%;
+  background-color: green
 }
 
 

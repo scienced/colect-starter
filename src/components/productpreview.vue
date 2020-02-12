@@ -2,7 +2,7 @@
 
   <div class="card my-2 border-0 text-center c-prod-preview" >
 
-    <div class="c-favorite h5" @click="makeFavorite()" v-b-popover.hover.lefttop="'Add to favorites basket'"><b-icon :icon="type" class="primary" variant="primary"></b-icon></div>
+    <div class="c-favorite h5" @click="makeFavorite()" v-b-popover.hover.lefttop="'Add to favorites basket'"><b-icon :icon="iconType" class="primary" variant="primary"></b-icon></div>
    
         <img class="product-img" :src="imageSrc" :alt="caption">
     
@@ -34,8 +34,17 @@
               type: String,
               required: true
             },
+            selectAll: {
+              type: Boolean
+            }
         },
         computed: {
+
+          iconType() {
+            if(this.type == 'heart-fill' || this.selectAll == true) {return 'heart-fill'}
+              else {return 'heart'}
+          }
+
             
         },
         methods: {
