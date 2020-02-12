@@ -10,17 +10,17 @@
 ],
 
 "shopthelook1": [
-{ "id": 1, "url": "https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png", "caption": "BODI STOOL ON LOW STAND WITH VELVET FABRIC", "date": "2016-10-15 13:43:27" },
-{ "id": 2, "url": "https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png", "caption": "PLATO DESK OVAL", "date": "2016-10-15 13:43:27" },
-{ "id": 3, "url": "https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png", "caption": "PLATO DESK RECTANGULAR", "date": "2016-10-15 13:43:27" },
-{ "id": 4, "url": "https://images.cmft.io/1115457393585688576/1170586772703416320/1170586772724387840/image.png", "caption": "ARC ARMCHAIR METAL FRAME WITH DAN FABRIC", "date": "2016-10-15 13:43:27" },
-{ "id": 5, "url": "https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png", "caption": "TABLELAMP METAL & LED BULB", "date": "2016-10-15 13:43:27" },
-{ "id": 6, "url": "https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png", "caption": "S/2 OVAL IRON MIRRORS", "date": "2016-10-15 13:43:27" },
-{ "id": 7, "url": "https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png", "caption": "BABA STOOL ON STAND WITH VELVET FABRIC S", "date": "2016-10-15 13:43:27" },
-{ "id": 8, "url": "https://images.cmft.io/1115457393585688576/1180738906505744384/1180738906522525696/image.png", "caption": "PLACEMAT DOUBLE STICH", "date": "2016-10-15 13:43:27" },
-{ "id": 9, "url": "https://images.cmft.io/1115457393585688576/1180738905868214272/1180738905889185792/image.png", "caption": "ABERDEEN CABINET", "date": "2016-10-15 13:43:27" },
-{ "id": 10, "url": "https://images.cmft.io/1115457393585688576/1180738912348413952/1180738912373575680/image.png", "caption": "CUTLERYSET OF 4 EACH 6PCS & GELTEX BOX", "date": "2016-10-15 13:43:27" },
-{ "id": 11, "url": "https://images.cmft.io/1115457393585688576/1180738911878647808/1180738911895425024/image.png", "caption": "RIO BUTLERTRAY", "date": "2016-10-15 13:43:27" }
+{ "id": 1, "url": "https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png", "caption": "BODI STOOL ON LOW STAND WITH VELVET FABRIC", "date": "2016-10-15 13:43:27", "selected": false },
+{ "id": 2, "url": "https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png", "caption": "PLATO DESK OVAL", "date": "2016-10-15 13:43:27", "selected": false  },
+{ "id": 3, "url": "https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png", "caption": "PLATO DESK RECTANGULAR", "date": "2016-10-15 13:43:27", "selected": true  },
+{ "id": 4, "url": "https://images.cmft.io/1115457393585688576/1170586772703416320/1170586772724387840/image.png", "caption": "ARC ARMCHAIR METAL FRAME WITH DAN FABRIC", "date": "2016-10-15 13:43:27", "selected": false  },
+{ "id": 5, "url": "https://images.cmft.io/1115457393585688576/1170586899329458176/1170586899354624000/image.png", "caption": "TABLELAMP METAL & LED BULB", "date": "2016-10-15 13:43:27", "selected": false  },
+{ "id": 6, "url": "https://images.cmft.io/1115457393585688576/1170589188370866176/1170589188391833600/image.png", "caption": "S/2 OVAL IRON MIRRORS", "date": "2016-10-15 13:43:27", "selected": false  },
+{ "id": 7, "url": "https://images.cmft.io/1115457393585688576/1170587019680817152/1170587019705982976/image.png", "caption": "BABA STOOL ON STAND WITH VELVET FABRIC S", "date": "2016-10-15 13:43:27", "selected": false  },
+{ "id": 8, "url": "https://images.cmft.io/1115457393585688576/1180738906505744384/1180738906522525696/image.png", "caption": "PLACEMAT DOUBLE STICH", "date": "2016-10-15 13:43:27", "selected": false  },
+{ "id": 9, "url": "https://images.cmft.io/1115457393585688576/1180738905868214272/1180738905889185792/image.png", "caption": "ABERDEEN CABINET", "date": "2016-10-15 13:43:27", "selected": false  },
+{ "id": 10, "url": "https://images.cmft.io/1115457393585688576/1180738912348413952/1180738912373575680/image.png", "caption": "CUTLERYSET OF 4 EACH 6PCS & GELTEX BOX", "date": "2016-10-15 13:43:27", "selected": false  },
+{ "id": 11, "url": "https://images.cmft.io/1115457393585688576/1180738911878647808/1180738911895425024/image.png", "caption": "RIO BUTLERTRAY", "date": "2016-10-15 13:43:27", "selected": false  }
 ],
 
 "shopthelook2": [
