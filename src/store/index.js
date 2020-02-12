@@ -37,7 +37,7 @@ export default new Vuex.Store({
    })
   },
   loadStl({commit}) {
-    Vue.axios.get('shopthelook2').then(result => {
+    Vue.axios.get('shopthelook1').then(result => {
       commit('SAVE_STL', result.data);
     }).catch(error => {
       throw new Error(`API ${error}`);

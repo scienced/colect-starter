@@ -1,33 +1,42 @@
 <template>
 <div>
 
-     <div class="card look-image-holder clickable border background-visual cover"  v-b-visible="visibleHandler">
+     <div class="card look-image-holder clickable border background-visual cover" v-b-visible="visibleHandler" :ref="'look' + image.id">
 
-       
-     <video v-show="image.video" class="c-look-video" :poster="image.url" preload="none" autoplay="autoplay" playsinline="" loop="loop" muted="muted"><source :src="image.url"></video>
+    <!-- <video v-show="image.video" class="c-look-video" :poster="image.url" preload="none" autoplay="autoplay" playsinline="" loop="loop" muted="muted"><source :src="image.url"></video>-->
 
       <b-img-lazy  v-show="!image.video" class="c-look-image" :src="image.url" alt=""></b-img-lazy>
-     
 
        <div v-show="image.caption" class="card-img-overlay caption-body">
         <div class="caption-overlay">{{image.caption}}</div>
        </div>
 
-      <div class="row full-height no-gutters overflow-hidden clickable" >
-        <div class="col-sm-9 col-md-9 col-lg-10 " @click.self="showshop=!showshop">
+        <div class="c-info-icon">
+        <div class="c-icon h2"><b-icon-info-square></b-icon-info-square></div>
+       </div>
+
+
+
+      <div class="row full-height no-gutters overflow-hidden " >
+        <div class="col-md-6 " @click.self="clickScreen()">
           
         </div>
 
-        <div class="col-sm-3 col-md-3 col-lg-2" @click.self="showshop=!showshop">
+        <div class="col-md-6 " @click.self="clickScreen()">
          <transition name="fade">
-                <div class="stl100 rounded-right" v-show="showshop">
+                <div class="stl100 rounded-right c-pane" v-show="showshop">
 
-                    <div class="text-right"><b-button variant="link" @click="showshop=false"> <b-icon-x-circle></b-icon-x-circle>{{ $t("close") }}</b-button></p></div>
+                    <div class="c-info-icon" v-show="image.landscape">
+                      <b-button variant="link" v-b-popover.hover.lefttop="'Add all products to favorites basket'" @click="addAll()"> select all</b-button>
+                      <b-button variant="link" @click="showshop=false"> 
+                       <div class="h4"><b-icon-x-circle></b-icon-x-circle>{{ $t("close") }}</div>
+                        </b-button>
+                    </div>
                     
                     
-                      <div class="d-flex flex-wrap c-prod-preview-container">
+                      <div class="d-flex flex-wrap c-prod-preview-container mt-4">
                         
-                        <productPreview class="c-pp" v-for="product in this.$store.state.stl" :imageSrc="product.url" :caption="product.caption"></productPreview>
+                        <productPreview class="c-pp" v-for="product in this.$store.state.stl" :imageSrc="product.url" :caption="product.caption" ></productPreview>
                       </div>
 
                  
@@ -67,20 +76,33 @@
         },
         methods: {
             visibleHandler(isVisible) {
-              if (isVisible) {
+              if (!isVisible && this.image.landscape==true) {
                 //setTimeout(() => this.showshop = true, 2000);
-                
-
-
-              } else {
                 this.showshop = false
+              }
+              if (isVisible){
+                console.log("emit " + this.image.id)
+                this.$emit('look-scrolled', this.image.id);
 
               }
+            },
+            clickScreen(){
+              console.log("clicked")
+              if(this.image.landscape==true){
+                this.showshop=!this.showshop
+              }
+
             }
 
         },
 
         created () {
+          if(this.image.landscape == false) {
+            this.showshop = true
+          }
+
+
+
 
         }
     };
@@ -102,11 +124,22 @@
     padding: 1rem;
     text-align: left;
     font-family: 'Source Serif Pro', serif;
+    font-size: 1.2rem;
 }
 
 .caption-body {
     padding: 0rem!important;
 } 
+
+.c-info-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.c-icon {
+  color: white;
+    padding: 0.51rem;
+}
 
 .stl50 {
     height: 100%;
@@ -197,6 +230,10 @@
       margin: 15px auto;
     min-width: 180px!important;
 
+}
+
+.c-pane {
+  cursor: auto;
 }
 
 

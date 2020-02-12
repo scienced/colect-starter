@@ -1,21 +1,25 @@
 <template>
  
-     	 
-   <b-container fluid class="section grayback scroll-snap-container">
+   <div>
+    <b-progress height="4px" :value="scroll" :max="5" class="c-progress"></b-progress>
+
+
+   <b-container fluid class="section ">
     
 
-      <lookNav class="item-no-snap"></lookNav>
+      <lookNav class=""></lookNav>
 
       <b-spinner class="spinner-position" variant="primary" label="Loadig lookbook data" type="grow" v-show="loading"></b-spinner>
   
  
 
-     <look v-for="(image, index) in this.$store.state.looks" :image="image" class="item" :id="'look' + image.id" :class="{ 'item-first': index === 0 }"></look>
+     <look v-for="(image, index) in this.$store.state.looks" :image="image" class="" :id="'look' + image.id" :class="{ 'item-first': index === 0 }" @look-scrolled="scrolled"></look>
 
    
 
 
   </b-container>
+</div>
 
 
  
@@ -38,7 +42,19 @@ Vue.use(VueLazyload, {
 })
 
 const VueScrollTo = require('vue-scrollto')
-Vue.use(VueScrollTo)
+Vue.use(VueScrollTo, {
+     container: "body",
+     duration: 500,
+     easing: "ease",
+     offset: 0,
+     force: true,
+     cancelable: false,
+     onStart: false,
+     onDone: false,
+     onCancel: false,
+     x: false,
+     y: true
+ })
 
 
 
@@ -48,7 +64,7 @@ export default {
   components: {
     'lookNav': lookNav,
      'looks': looks,
-     'look': look,
+     'look': look
      
 
   },
@@ -57,6 +73,7 @@ export default {
       return {
                 isActive: true,
                 loading: true,
+                scroll: 0
             }
         },
   created() {
@@ -68,6 +85,11 @@ export default {
       this.loading = true
       await this.$store.dispatch('loadLooks')
       this.loading = false
+    },
+
+    scrolled (value) {
+      this.scroll = value -1
+
     }
   }
 };
@@ -107,6 +129,13 @@ export default {
   scroll-snap-align: none;
 }
 
+.c-progress{
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 5px;
+
+}
 
 
 </style>

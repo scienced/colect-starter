@@ -3,7 +3,7 @@
 	 <div class="d-flex justify-content-end py-2">
 	    	
             <b-button  variant="primary mr-1 d-none d-sm-inline" outlined v-b-popover.hover.bottom="$t('fulldev')">
-            <b-icon-arrows-fullscreen></b-icon-arrows-fullscreen>
+            <b-icon-arrows-fullscreen></b-icon-arrows-fullscreen> Fullscreen
             </b-button>
 
             
