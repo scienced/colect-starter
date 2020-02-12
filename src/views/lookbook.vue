@@ -5,7 +5,7 @@
     <!--<b-progress height="4px" :value="scroll" :max="5" class="c-progress"></b-progress>-->
 <navbar></navbar>
 
-   <b-container fluid class="section ">
+   <b-container fluid class="section bg-light ">
 
     
 

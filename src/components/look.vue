@@ -24,7 +24,7 @@
 
         <div class="col-md-6" v-bind:class="{ 'order-1': !image.landscape }"  @click.self="clickScreen()">
          <transition name="fade">
-                <div class="stl100  c-pane" v-show="showshop">
+                <div class="stl100  c-pane" v-show="showshop" ref="infoBox">
 
                     <div class="c-info-icon" >
                       <b-button variant="link" v-b-popover.hover.lefttop="'Add all products to favorites basket'" @click="addAll=!a"> select all</b-button>
@@ -100,6 +100,7 @@
           if(this.image.landscape == false) {
             this.showshop = true
           }
+          console.log(this.$refs.infoBox.clientHeight)
 
 
 
