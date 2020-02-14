@@ -27,7 +27,7 @@
                 <div class="stl100  c-pane" v-show="showshop" ref="infoBox">
 
                     <div class="c-info-icon" >
-                      <b-button variant="link" v-b-popover.hover.lefttop="'Add all products to favorites basket'" @click="addAll=!a"> select all</b-button>
+                      <b-button variant="link" v-b-popover.hover.lefttop="'Add all products to favorites basket'" @click="addAll=!addAll"> select all</b-button>
                       <b-button variant="link" @click="showshop=false" v-show="image.landscape"> 
                        <div class="h4"><b-icon-x-circle></b-icon-x-circle></div>
                         </b-button>
@@ -100,12 +100,14 @@
           if(this.image.landscape == false) {
             this.showshop = true
           }
-          console.log(this.$refs.infoBox.clientHeight)
 
+        },
+        mounted() {
+  window.addEventListener("keypress", e => {
+    console.log(e.keyCode);
+  });
+}
 
-
-
-        }
     };
 </script>
 

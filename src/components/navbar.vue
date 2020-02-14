@@ -2,7 +2,7 @@
 
 <div>
   <b-navbar toggleable="lg" type="light" variant="white">
-    <b-navbar-brand href="#"<img src="https://lh3.googleusercontent.com/proxy/Pc4hZxtMlzGlD1are7hJLkJZg5HjM6erURsxTdy6z3TyUnWWSg4uPqvfi4PjiFgaWvJgNewIfm-GpdUs5OK5iLkcfGfBazxDB6wO5oUOR-ZFqX1cCn1Prh4Vcq4WIw" style="max-height: 37px;"></b-navbar-brand>
+    <b-navbar-brand href="#"<img src="http://legacy.domedeco.com/sites/all/themes/domedeco/logo.png" style="max-height: 37px;"></b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
