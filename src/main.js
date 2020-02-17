@@ -27,7 +27,7 @@ export const i18n = new VueI18n({
   fallbackLocale: 'en',
 
   messages: { en: {     
-    close: 'close',
+    close: '',
     look: 'look | looks',
     fulldev: 'Fullscreen mode is still in development'    
   },   

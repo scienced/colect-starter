@@ -1,2 +1,3 @@
 // Define your variable overrides here
-$primary: #44d1f1;
+$primary: #DAA520;
+$enable-rounded: false;
